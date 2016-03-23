@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sherpany Maps</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <script async defer src="../static/maps.js"></script>
+    <script async defer src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{gmap_key}}&callback=initMap"></script>
+  </head>
+  <body>
+    <div id="api_data" data-url="{% url 'api_store_point' %}" hidden></div>
+    <div id="map"></div>
+    <div id="content">
+      <a class="button" href="{% url 'maps' %}?discard=True"> Reset All </a>
+      <ol id="address"></ol>
+    </div>
+  </body>
+</html>
